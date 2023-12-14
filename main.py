@@ -139,8 +139,6 @@ rf = RandomForestRegressor(n_estimators=50, random_state=1, min_samples_split=5)
 
 mean_ap, aps, all_predictions = backtest(stats, rf, years[28:], predictors + ["NPos", "NTm"])
 
-
-
 mean_ap, aps, all_predictions = backtest(stats, reg, years[28:], predictors)
 
 
@@ -148,6 +146,7 @@ mean_ap, aps, all_predictions = backtest(stats, reg, years[28:], predictors)
 from sklearn.preprocessing import StandardScaler
 
 sc = StandardScaler()
+
 
 
 def backtest(stats, model, years, predictors):
